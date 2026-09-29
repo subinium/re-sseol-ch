@@ -1,0 +1,14 @@
+{
+  "name": "re-sseol-ch",
+  "description": "리썰치: 음슴체 커뮤니티식 논문 리서치",
+  "owner": {
+    "name": "Subin An"
+  },
+  "plugins": [
+    {
+      "name": "paper-report",
+      "source": "./",
+      "description": "논문을 음슴체 커뮤니티 정보글로 풀어주는 스킬"
+    }
+  ]
+}

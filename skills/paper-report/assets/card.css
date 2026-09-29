@@ -1,0 +1,43 @@
+/* Plain community-post look shared by the web viewer, post.html, and PNG parts.
+   Deliberately single-theme: white page, dark text, no card chrome. */
+:root {
+  color-scheme: light;
+  --bg: #ffffff;
+  --ink: #161616;
+  --muted: #7a7a7a;
+  --line: #ececec;
+  --link: #1d5bd6;
+}
+* { box-sizing: border-box; }
+html, body { margin: 0; background: var(--bg); color: var(--ink); }
+body {
+  font-family: "Pretendard Variable", Pretendard, "Noto Sans KR", -apple-system, BlinkMacSystemFont,
+    "Apple SD Gothic Neo", "Malgun Gothic", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  word-break: keep-all;
+  overflow-wrap: anywhere;
+}
+.part { font-size: 17px; line-height: 1.75; }
+.part > :first-child { margin-top: 0; }
+.part h1 { font-size: 24px; line-height: 1.4; margin: 0 0 16px; letter-spacing: -0.02em; text-wrap: balance; }
+.part h2 { font-size: 19px; line-height: 1.45; margin: 0 0 12px; letter-spacing: -0.01em; text-wrap: balance; }
+.part p { margin: 0 0 1.1em; }
+.part a { color: var(--link); text-decoration: none; }
+.part a:hover { text-decoration: underline; }
+.part strong { font-weight: 700; }
+.part figure { margin: 6px 0 20px; }
+.part figure img {
+  display: block; max-width: 100%; max-height: 520px; width: auto; height: auto;
+}
+.part figure img.graphic { max-height: none; width: 100%; }
+/* One paper column is ~243pt wide; 440px renders its 10pt text at about body size. */
+.part figure img.quote {
+  width: min(100%, 440px); max-height: none;
+  border-left: 3px solid var(--line); padding-left: 12px;
+}
+.part figcaption { font-size: 12.5px; color: var(--muted); margin-top: 6px; line-height: 1.5; }
+.part ul, .part ol { padding-left: 1.2em; margin: 0 0 1em; }
+.part li { margin: 0.2em 0; }
+.part table { border-collapse: collapse; width: 100%; font-size: 14px; margin: 0 0 1em; }
+.part th, .part td { border-bottom: 1px solid var(--line); padding: 6px 8px; text-align: left; }
+.part code { font-size: 0.9em; }

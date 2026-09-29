@@ -1,0 +1,50 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: astral-sh/setup-uv@v6
+
+      - name: Lint and format
+        run: |
+          uvx ruff check skills/paper-report/scripts
+          uvx ruff format --check skills/paper-report/scripts
+
+      - name: Agent Skills spec
+        run: uvx --from skills-ref agentskills validate skills/paper-report
+
+      - name: Scripts start
+        run: |
+          for s in fetch_paper extract_figures lineage make_graphic check_report build_cards; do
+            uv run "skills/paper-report/scripts/$s.py" --help > /dev/null
+          done
+
+      - name: Manifests and version
+        run: |
+          uv run --with pyyaml python - <<'EOF'
+          import json, re, yaml
+          plugin = json.load(open(".claude-plugin/plugin.json"))
+          market = json.load(open(".claude-plugin/marketplace.json"))
+          assert any(p["name"] == plugin["name"] for p in market["plugins"]), "plugin missing from marketplace"
+          fm = yaml.safe_load(open("skills/paper-report/SKILL.md", encoding="utf-8").read().split("---")[1])
+          assert fm["name"] == plugin["name"], "SKILL.md name differs from plugin.json"
+          assert len(fm["description"]) <= 1024, "description too long"
+          changelog = open("CHANGELOG.md", encoding="utf-8").read()
+          top = re.search(r"^## \[(\d+\.\d+\.\d+)\]", changelog, re.M).group(1)
+          assert top == plugin["version"], f"CHANGELOG {top} != plugin.json {plugin['version']}"
+          print("version", plugin["version"])
+          EOF
+
+      - name: Example report
+        run: uv run skills/paper-report/scripts/check_report.py skills/paper-report/examples/transformer --allow-missing-figures

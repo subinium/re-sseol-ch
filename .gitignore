@@ -1,0 +1,16 @@
+# Generated reports (PDFs, crops, renders) and sample output images
+reports/
+docs/images/
+**/.build/
+
+# Python
+__pycache__/
+*.pyc
+.ruff_cache/
+.venv/
+
+# OS
+.DS_Store
+
+# Local Claude Code state
+.claude/

@@ -1,0 +1,19 @@
+{
+  "name": "paper-report",
+  "version": "0.1.0",
+  "description": "리썰치: 논문을 음슴체 커뮤니티 정보글로 풀어주는 스킬. 그림, 인용 계보, 저자 맥락, 팩트 원장 검증, 게시글·짤·공유용 이미지 출력을 포함함.",
+  "author": {
+    "name": "Subin An",
+    "url": "https://github.com/subinium"
+  },
+  "homepage": "https://github.com/subinium/re-sseol-ch",
+  "repository": "https://github.com/subinium/re-sseol-ch",
+  "license": "MIT",
+  "keywords": [
+    "paper",
+    "research",
+    "korean",
+    "explainer",
+    "arxiv"
+  ]
+}

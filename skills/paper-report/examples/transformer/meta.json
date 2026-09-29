@@ -1,0 +1,44 @@
+{
+  "source_type": "arxiv",
+  "arxiv_id": "1706.03762",
+  "arxiv_version": "v7",
+  "title": "Attention Is All You Need",
+  "authors": [
+    {
+      "name": "Ashish Vaswani",
+      "affiliations": []
+    },
+    {
+      "name": "Noam Shazeer",
+      "affiliations": []
+    },
+    {
+      "name": "Niki Parmar",
+      "affiliations": []
+    },
+    {
+      "name": "Jakob Uszkoreit",
+      "affiliations": []
+    },
+    {
+      "name": "Llion Jones",
+      "affiliations": []
+    },
+    {
+      "name": "Aidan N. Gomez",
+      "affiliations": []
+    },
+    {
+      "name": "Lukasz Kaiser",
+      "affiliations": []
+    },
+    {
+      "name": "Illia Polosukhin",
+      "affiliations": []
+    }
+  ],
+  "published": "2017-06-12T17:57:34Z",
+  "comment": "15 pages, 5 figures",
+  "abs_url": "https://arxiv.org/abs/1706.03762",
+  "pdf_url": "https://arxiv.org/pdf/1706.03762"
+}

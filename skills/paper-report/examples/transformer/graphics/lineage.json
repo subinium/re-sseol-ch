@@ -1,0 +1,57 @@
+{
+ "type": "timeline",
+ "name": "lineage",
+ "title": "번역기에서 GPT까지, 한 장 요약",
+ "source": "출처: 각 논문 arXiv 최초 공개일 기준 (GPT-1은 OpenAI 기술 보고서, 2018)",
+ "items": [
+  {
+   "year": "2014",
+   "label": "어텐션 번역",
+   "org": "Jacobs Univ. Bremen, Univ. de Montréal",
+   "note": "번역할 때 원문 어디를 볼지 골라 봄 (arXiv 9월 1일)"
+  },
+  {
+   "year": "2014",
+   "label": "seq2seq",
+   "org": "Google",
+   "note": "LSTM으로 문장을 통째로 읽고 번역 (arXiv 9월 10일)"
+  },
+  {
+   "year": "2016",
+   "label": "ByteNet",
+   "org": "Google DeepMind",
+   "note": "RNN 대신 CNN으로 병렬 계산"
+  },
+  {
+   "year": "2017",
+   "label": "ConvS2S",
+   "org": "Facebook AI Research",
+   "note": "CNN 번역, 트랜스포머 35일 전 공개"
+  },
+  {
+   "year": "2017",
+   "label": "트랜스포머",
+   "org": "Google Brain, Google Research",
+   "note": "RNN, CNN 빼고 어텐션만 남김",
+   "highlight": true
+  },
+  {
+   "year": "2018",
+   "label": "GPT-1",
+   "org": "OpenAI",
+   "note": "트랜스포머 디코더만 12층"
+  },
+  {
+   "year": "2018",
+   "label": "BERT",
+   "org": "Google AI Language",
+   "note": "트랜스포머 인코더를 가져다 씀"
+  },
+  {
+   "year": "2020",
+   "label": "ViT",
+   "org": "Google Research, Brain Team",
+   "note": "이미지를 조각 내서 트랜스포머에 넣음"
+  }
+ ]
+}
