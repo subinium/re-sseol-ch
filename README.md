@@ -1,8 +1,19 @@
-# re-sseol-ch (리썰치)
+<p align="center">
+  <img src="assets/re-sseol-ch-thumbnail.png" alt="subinium/re-sseol-ch · 리썰치 — 논문을 썰로 풀어드립니다" width="100%">
+</p>
 
-[![version](https://img.shields.io/badge/version-0.1.0-1d5bd6)](CHANGELOG.md)
-[![CI](https://github.com/subinium/re-sseol-ch/actions/workflows/ci.yml/badge.svg)](https://github.com/subinium/re-sseol-ch/actions/workflows/ci.yml)
-[![license](https://img.shields.io/badge/license-MIT-161616)](LICENSE)
+<p align="center">
+  <a href="CHANGELOG.md"><img src="https://img.shields.io/badge/version-0.1.0-1d5bd6" alt="Version 0.1.0"></a>
+  <a href="https://github.com/subinium/re-sseol-ch/actions/workflows/ci.yml"><img src="https://github.com/subinium/re-sseol-ch/actions/workflows/ci.yml/badge.svg" alt="CI"></a>
+  <a href="LICENSE"><img src="https://img.shields.io/badge/license-MIT-161616" alt="License: MIT"></a>
+</p>
+
+<p align="center">
+  <a href="#설치">설치</a> ·
+  <a href="#쓰는-법">사용법</a> ·
+  <a href="skills/paper-report/examples/transformer/">예시</a> ·
+  <a href="CHANGELOG.md">변경 내역</a>
+</p>
 
 논문을 커뮤니티 정보글처럼 풀어 주는 에이전트 스킬입니다. 이름은 리서치에 썰을 붙였습니다.
 
